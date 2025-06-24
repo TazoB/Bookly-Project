@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="577.0" prefWidth="865.0" stylesheets="@../../Style/Styles/mainPageStyle.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.AddBookPage.AddBookPageController">
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="white" height="95.0" stroke="black" strokeType="INSIDE" width="865.0">
+      <effect>
+         <DropShadow color="#00000033" />
+      </effect>
+   </Rectangle>
+   <Label alignment="CENTER" layoutX="311.0" layoutY="-16.0" prefHeight="66.0" prefWidth="242.0" stylesheets="@../../Style/Styles/mainPageStyle.css" text="Bookly">
+      <font>
+         <Font name="Brush Script MT Italic" size="81.0" />
+      </font>
+   </Label>
+   <Button layoutX="685.0" layoutY="14.0" mnemonicParsing="false" onAction="#submitBookData" prefHeight="70.0" prefWidth="150.0" stylesheets="@../../Style/Styles/addBookPageStyle.css" text="Submit">
+      <font>
+         <Font name="Bodoni MT Condensed" size="35.0" />
+      </font>
+   </Button>
+   <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#changeSceneToMainPage" prefHeight="70.0" prefWidth="106.0" stylesheets="@../../Style/Styles/addBookPageStyle.css" text="Exit">
+      <font>
+         <Font name="Bodoni MT Condensed" size="35.0" />
+      </font>
+   </Button>
+   <ScrollPane id="scrollPane" hbarPolicy="NEVER" layoutY="95.0" prefHeight="481.0" prefWidth="866.0" stylesheets="@../../Style/Styles/mainPageStyle.css">
+
+      <AnchorPane prefHeight="718.0" prefWidth="862.0" stylesheets="@../../Style/Styles/addBookPageStyle.css">
+         <RadioButton fx:id="finishedRadioButton" layoutX="55.0" layoutY="426.0" mnemonicParsing="false" onAction="#appearRating" prefHeight="39.0" prefWidth="370.0" selected="true" stylesheets="@../../Style/Styles/addBookPageStyle.css" text="Book I've already read">
+            <font>
+               <Font name="Comic Sans MS" size="24.0" />
+            </font>
+            <toggleGroup>
+               <ToggleGroup fx:id="BookStatus" />
+            </toggleGroup>
+         </RadioButton>
+         <RadioButton fx:id="readingRadioButton" layoutX="55.0" layoutY="465.0" mnemonicParsing="false" onAction="#disappearRating" prefHeight="39.0" prefWidth="370.0" stylesheets="@../../Style/Styles/addBookPageStyle.css" text="Book I’m currently reading" toggleGroup="$BookStatus">
+            <font>
+               <Font name="Comic Sans MS" size="24.0" />
+            </font>
+         </RadioButton>
+         <RadioButton fx:id="toReadRadioButton" layoutX="55.0" layoutY="505.0" mnemonicParsing="false" onAction="#toReadRadioOnAction" prefHeight="43.0" prefWidth="415.0" stylesheets="@../../Style/Styles/addBookPageStyle.css" text="Book I want to read in the future" toggleGroup="$BookStatus">
+            <font>
+               <Font name="Comic Sans MS" size="24.0" />
+            </font>
+         </RadioButton>
+         <TextField fx:id="bookTitleField" layoutX="55.0" layoutY="121.0" prefHeight="42.0" prefWidth="374.0" promptText="Book Title *" styleClass="field" stylesheets="@../../Style/Styles/addBookPageStyle.css">
+            <font>
+               <Font name="Sylfaen" size="19.0" />
+            </font>
+         </TextField>
+         <TextField fx:id="bookAuthorField" layoutX="55.0" layoutY="177.0" prefHeight="42.0" prefWidth="374.0" promptText="Book Author *" styleClass="field" stylesheets="@../../Style/Styles/addBookPageStyle.css">
+            <font>
+               <Font name="Sylfaen" size="19.0" />
+            </font>
+         </TextField>
+         <TextField fx:id="pagesField" layoutX="54.0" layoutY="297.0" prefHeight="42.0" prefWidth="374.0" promptText="Number of Pages *" styleClass="field" stylesheets="@../../Style/Styles/addBookPageStyle.css">
+            <font>
+               <Font name="Sylfaen" size="19.0" />
+            </font>
+         </TextField>
+         <ChoiceBox fx:id="choiceBox" layoutX="54.0" layoutY="240.0" prefHeight="43.0" prefWidth="374.0" styleClass="field" stylesheets="@../../Style/Styles/addBookPageStyle.css" />
+         <ImageView fx:id="bookCoverImageView" fitHeight="271.0" fitWidth="222.0" layoutX="531.0" layoutY="121.0" onMouseClicked="#handleImageViewClick" pickOnBounds="true" preserveRatio="true" styleClass="image-view-button">
+            <Image url="@../../Style/Images/BAS901293212312BAS.png" />
+         </ImageView>
+         <Label fx:id="ratingLabel" alignment="CENTER" layoutX="41.0" layoutY="584.0" prefHeight="46.0" prefWidth="242.0" stylesheets="@../../Style/Styles/addBookPageStyle.css" text="Rate This Book:" textAlignment="CENTER" wrapText="true">
+            <font>
+               <Font name="Comic Sans MS Italic" size="32.0" />
+            </font>
+         </Label>
+         <SVGPath fx:id="star1" content="M50,15 L61,35 L85,35 L66,50 L75,72 L50,58 L25,72 L34,50 L15,35 L39,35 Z" fill="WHITE" layoutX="14.0" layoutY="609.0" scaleX="0.6" scaleY="0.7" stroke="BLACK" />
+         <SVGPath fx:id="star2" content="M50,15 L61,35 L85,35 L66,50 L75,72 L50,58 L25,72 L34,50 L15,35 L39,35 Z" fill="WHITE" layoutX="63.0" layoutY="609.0" scaleX="0.6" scaleY="0.7" stroke="BLACK" />
+         <SVGPath fx:id="star3" content="M50,15 L61,35 L85,35 L66,50 L75,72 L50,58 L25,72 L34,50 L15,35 L39,35 Z" fill="WHITE" layoutX="112.0" layoutY="609.0" scaleX="0.6" scaleY="0.7" stroke="BLACK" />
+         <SVGPath fx:id="star4" content="M50,15 L61,35 L85,35 L66,50 L75,72 L50,58 L25,72 L34,50 L15,35 L39,35 Z" fill="WHITE" layoutX="161.0" layoutY="609.0" scaleX="0.6" scaleY="0.7" stroke="BLACK" />
+         <SVGPath fx:id="star5" content="M50,15 L61,35 L85,35 L66,50 L75,72 L50,58 L25,72 L34,50 L15,35 L39,35 Z" fill="WHITE" layoutX="210.0" layoutY="609.0" scaleX="0.6" scaleY="0.7" stroke="BLACK" />
+         <TextField fx:id="descriptionField" alignment="TOP_LEFT" layoutX="493.0" layoutY="436.0" prefHeight="165.0" prefWidth="298.0" promptText="Description (optional)" styleClass="field" stylesheets="@../../Style/Styles/addBookPageStyle.css" />
+         <TextField fx:id="isbnField" layoutX="199.0" layoutY="19.0" prefHeight="42.0" prefWidth="258.0" promptText="ISBN or Title" styleClass="field" stylesheets="@../../Style/Styles/addBookPageStyle.css">
+            <font>
+               <Font name="Sylfaen" size="18.0" />
+            </font>
+         </TextField>
+         <Button layoutX="475.0" layoutY="19.0" onAction="#onSearchClicked" prefHeight="39.0" prefWidth="100.0" styleClass="field" stylesheets="@../../Style/Styles/addBookPageStyle.css" text="Search">
+            <font>
+               <Font name="Comic Sans MS" size="16.0" />
+            </font>
+         </Button>
+         <TextField fx:id="genreField" layoutX="55.0" layoutY="359.0" prefHeight="42.0" prefWidth="374.0" promptText="Genre (optional)" styleClass="field" stylesheets="@../../Style/Styles/addBookPageStyle.css" />
+         <Label alignment="CENTER" layoutX="200.0" layoutY="70.0" prefHeight="26.0" prefWidth="374.0" text="Or Add Manually:">
+            <font>
+               <Font name="Comic Sans MS Italic" size="18.0" />
+            </font>
+         </Label>
+         <DatePicker fx:id="startDatePicker" layoutX="84.0" layoutY="634.0" prefHeight="43.0" prefWidth="310.0" promptText="Start Date" styleClass="field" visible="false" />
+         <Label fx:id="optionalLabel" layoutX="84.0" layoutY="607.0" prefHeight="18.0" prefWidth="183.0" text="Optional" visible="false">
+            <font>
+               <Font name="Comic Sans MS Italic" size="15.0" />
+            </font>
+         </Label>
+         <DatePicker fx:id="endDatePicker" layoutX="332.0" layoutY="625.0" prefHeight="43.0" prefWidth="185.0" promptText="End Date" styleClass="field" />
+         <Label fx:id="optionalLabel1" layoutX="334.0" layoutY="598.0" prefHeight="18.0" prefWidth="183.0" text="Optional">
+            <font>
+               <Font name="Comic Sans MS Italic" size="15.0" />
+            </font>
+         </Label>
+         <TextField fx:id="currentPageField" layoutX="486.0" layoutY="634.0" prefHeight="42.0" prefWidth="311.0" promptText="Current Page *" styleClass="field" visible="false">
+            <font>
+               <Font name="Sylfaen" size="19.0" />
+            </font>
+         </TextField>
+         <Label fx:id="coverErrorLabel" alignment="CENTER" layoutX="504.0" layoutY="399.0" prefHeight="22.0" prefWidth="275.0" text="you have to upload cover image" textFill="RED" visible="false">
+            <font>
+               <Font name="Sylfaen" size="20.0" />
+            </font>
+         </Label>
+      </AnchorPane>
+   </ScrollPane>
+
+</AnchorPane>

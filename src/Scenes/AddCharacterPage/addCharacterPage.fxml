@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="577.0" prefWidth="865.0" stylesheets="@../../Style/Styles/mainPageStyle.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.AddCharacterPage.AddCharacterPageController">
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="white" height="95.0" stroke="black" strokeType="INSIDE" width="865.0">
+        <effect>
+            <DropShadow color="#00000033" />
+        </effect>
+    </Rectangle>
+    <Label alignment="CENTER" layoutX="311.0" layoutY="-16.0" prefHeight="66.0" prefWidth="242.0" stylesheets="@../../Style/Styles/mainPageStyle.css" text="Bookly">
+        <font>
+            <Font name="Brush Script MT Italic" size="81.0" />
+        </font>
+    </Label>
+    <Button layoutX="685.0" layoutY="14.0" mnemonicParsing="false" onAction="#submitCharacterData" prefHeight="70.0" prefWidth="150.0" stylesheets="@../../Style/Styles/addBookPageStyle.css" text="Submit">
+        <font>
+            <Font name="Bodoni MT Condensed" size="35.0" />
+        </font>
+    </Button>
+    <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#changeSceneToBookPage" prefHeight="70.0" prefWidth="106.0" stylesheets="@../../Style/Styles/addBookPageStyle.css" text="Exit">
+        <font>
+            <Font name="Bodoni MT Condensed" size="35.0" />
+        </font>
+    </Button>
+    <ScrollPane id="scrollPane" hbarPolicy="NEVER" layoutY="95.0" prefHeight="481.0" prefWidth="866.0" stylesheets="@../../Style/Styles/mainPageStyle.css">
+
+        <AnchorPane prefHeight="450.0" prefWidth="862.0" stylesheets="@../../Style/Styles/addBookPageStyle.css">
+            <TextField fx:id="nameField" layoutX="45.0" layoutY="27.0" prefHeight="42.0" prefWidth="331.0" promptText="Name *" styleClass="field" stylesheets="@../../Style/Styles/addBookPageStyle.css" />
+            <TextField fx:id="aliasFiled" layoutX="45.0" layoutY="83.0" prefHeight="42.0" prefWidth="331.0" promptText="Alias" styleClass="field" stylesheets="@../../Style/Styles/addBookPageStyle.css" />
+            <Label layoutX="45.0" layoutY="139.0" prefHeight="18.0" prefWidth="250.0" text="Character Type">
+                <font>
+                    <Font name="Sylfaen" size="21.0" />
+                </font>
+            </Label>
+            <RadioButton fx:id="mainCharacterType" layoutX="45.0" layoutY="170.0" mnemonicParsing="false" onAction="#setRelateVisibilityFalse" prefHeight="24.0" prefWidth="87.0" selected="true" text="Main">
+                <font>
+                    <Font name="Sylfaen" size="18.0" />
+                </font>
+                <toggleGroup>
+                    <ToggleGroup fx:id="characterType" />
+                </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="secondaryCharacterType" layoutX="184.0" layoutY="170.0" mnemonicParsing="false" onAction="#setRelateVisibilityTrue" text="Secondary" toggleGroup="$characterType">
+                <font>
+                    <Font name="Sylfaen" size="18.0" />
+                </font>
+            </RadioButton>
+            <Label layoutX="45.0" layoutY="209.0" prefHeight="18.0" prefWidth="250.0" text="Gender">
+                <font>
+                    <Font name="Sylfaen" size="21.0" />
+                </font>
+            </Label>
+            <RadioButton fx:id="maleRadioButton" layoutX="45.0" layoutY="243.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="87.0" selected="true" text="Male">
+                <font>
+                    <Font name="Sylfaen" size="18.0" />
+                </font>
+                <toggleGroup>
+                    <ToggleGroup fx:id="gender" />
+                </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="femaleRadioButton" layoutX="184.0" layoutY="243.0" mnemonicParsing="false" text="Female" toggleGroup="$gender">
+                <font>
+                    <Font name="Sylfaen" size="18.0" />
+                </font>
+            </RadioButton>
+            <TextField fx:id="ageField" layoutX="45.0" layoutY="304.0" prefHeight="42.0" prefWidth="331.0" promptText="Age" styleClass="field" stylesheets="@../../Style/Styles/addBookPageStyle.css" />
+            <TextArea fx:id="descriptionField" layoutX="442.0" layoutY="27.0" prefHeight="181.0" prefWidth="330.0" promptText="Description" styleClass="field" />
+            <TextField fx:id="relateToMainChar" layoutX="44.0" layoutY="404.0" prefHeight="42.0" prefWidth="333.0" promptText="e.g. He was main character's father" styleClass="field" stylesheets="@../../Style/Styles/addBookPageStyle.css" visible="false" />
+            <TextField fx:id="physicalAppField" layoutX="441.0" layoutY="404.0" prefHeight="42.0" prefWidth="331.0" promptText="Physical Appearance" styleClass="field" stylesheets="@../../Style/Styles/addBookPageStyle.css" />
+            <TextArea fx:id="importanceField" layoutX="442.0" layoutY="221.0" prefHeight="165.0" prefWidth="330.0" promptText="Importance" styleClass="field" />
+            <TextField fx:id="deathField" layoutX="45.0" layoutY="378.0" prefHeight="42.0" prefWidth="331.0" promptText="Death" styleClass="field" stylesheets="@../../Style/Styles/addBookPageStyle.css" />
+            <Label fx:id="relateToLabel" layoutX="45.0" layoutY="373.0" prefHeight="26.0" prefWidth="330.0" text="Relationship to Main Character" visible="false">
+                <font>
+                    <Font name="Sylfaen" size="21.0" />
+                </font>
+            </Label>
+        </AnchorPane>
+    </ScrollPane>
+</AnchorPane>

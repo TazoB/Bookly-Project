@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="577.0" prefWidth="865.0" stylesheets="@../../Style/Styles/mainPageStyle.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.CollectionPage.CollectionPageController">
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="white" height="95.0" stroke="black" strokeType="INSIDE" width="865.0">
+        <effect>
+            <DropShadow color="#00000033" />
+        </effect>
+    </Rectangle>
+    <Label alignment="CENTER" layoutX="311.0" layoutY="-16.0" prefHeight="66.0" prefWidth="242.0" stylesheets="@../../Style/Styles/mainPageStyle.css" text="Bookly">
+        <font>
+            <Font name="Brush Script MT Italic" size="81.0" />
+        </font>
+    </Label>
+    <Button layoutX="685.0" layoutY="14.0" mnemonicParsing="false" onAction="#changeSceneToAddBookPage" prefHeight="70.0" prefWidth="150.0" stylesheets="@../../Style/Styles/mainPageStyle.css" text="Add Book">
+        <font>
+            <Font name="Bodoni MT Condensed" size="35.0" />
+        </font>
+    </Button>
+    <Button layoutX="24.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToMyBooks" prefHeight="70.0" prefWidth="127.0" stylesheets="@../../Style/Styles/mainPageStyle.css" text="Return">
+        <font>
+            <Font name="Bodoni MT Condensed" size="35.0" />
+        </font>
+    </Button>
+    <ScrollPane id="scrollPane" hbarPolicy="NEVER" layoutY="95.0" prefHeight="418.0" prefWidth="866.0" stylesheets="@../../Style/Styles/mainPageStyle.css">
+
+        <AnchorPane id="anchorPane" fx:id="mainAnchorPane" prefHeight="397.0" prefWidth="866.0" stylesheets="@../../Style/Styles/mainPageStyle.css" />
+    </ScrollPane>
+
+    <HBox alignment="CENTER" layoutY="497.0" prefHeight="43.0" prefWidth="867.0" spacing="30" styleClass="bottom-nav">
+        <Button prefHeight="225.0" prefWidth="178.0" styleClass="nav-button-selected" text="MY BOOKS" />
+        <Button onAction="#goToGoals" prefHeight="69.0" prefWidth="177.0" styleClass="nav-button" text="GOALS" />
+        <Button onAction="#goToStats" prefHeight="69.0" prefWidth="177.0" styleClass="nav-button" text="STATS" />
+        <Button onAction="#goToProfile" prefHeight="69.0" prefWidth="177.0" styleClass="nav-button" text="STORE" />
+    </HBox>
+
+</AnchorPane>

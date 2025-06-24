@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="577.0" prefWidth="865.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.Registration.ResetUser.ResetUserController">
+    <ImageView fitHeight="578.0" fitWidth="871.0" pickOnBounds="true">
+        <Image url="@../../../Style/Images/BookBackgroundLowerOpacity.png" />
+    </ImageView>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="white" height="95.0" stroke="black" strokeType="INSIDE" width="871.0">
+        <effect>
+            <DropShadow color="#00000033" />
+        </effect>
+    </Rectangle>
+    <Label alignment="CENTER" layoutX="314.0" layoutY="-16.0" prefHeight="66.0" prefWidth="242.0" stylesheets="@../../../Style/Styles/mainPageStyle.css" text="Bookly">
+        <font>
+            <Font name="Brush Script MT Italic" size="81.0" />
+        </font>
+    </Label>
+    <AnchorPane layoutY="94.0" prefHeight="484.0" prefWidth="871.0">
+        <Rectangle arcHeight="20.0" arcWidth="20.0" fill="white" height="273.0" layoutX="154.0" layoutY="106.0" stroke="black" strokeType="INSIDE" strokeWidth="3.0" width="564.0">
+            <effect>
+                <DropShadow color="#00000044" radius="15.0" />
+            </effect>
+        </Rectangle>
+        <Label alignment="CENTER" layoutX="157.0" layoutY="185.0" prefHeight="18.0" prefWidth="558.0" text="Reset your Account">
+            <font>
+                <Font name="Comic Sans MS" size="30.0" />
+            </font>
+        </Label>
+        <TextField fx:id="usernameField" layoutX="317.0" layoutY="250.0" prefHeight="41.0" prefWidth="242.0" promptText="Username" styleClass="field" stylesheets="@../../../Style/Styles/addBookPageStyle.css" />
+        <Label layoutX="324.0" layoutY="321.0" prefHeight="22.0" prefWidth="178.0" text="Already have an account?">
+            <font>
+                <Font name="Sylfaen" size="16.0" />
+            </font>
+        </Label>
+        <Button fx:id="nextButton" layoutX="619.0" layoutY="326.0" mnemonicParsing="false" onAction="#changeToQA" prefHeight="42.0" prefWidth="89.0" stylesheets="@../../../Style/Styles/LogInPageStyle.css" text="Next">
+            <font>
+                <Font name="Sylfaen" size="20.0" />
+            </font>
+        </Button>
+        <Circle fill="WHITE" layoutX="436.0" layoutY="118.0" radius="55.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+        <ImageView fitHeight="170.0" fitWidth="167.0" layoutX="353.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../../Style/Images/Logo.png" />
+        </ImageView>
+        <Label layoutX="501.0" layoutY="321.0" onMouseClicked="#changeSceneToLogInPageME" prefHeight="22.0" prefWidth="51.0" text="Log In" textFill="#002fff" underline="true">
+            <font>
+                <Font name="Sylfaen" size="16.0" />
+            </font>
+        </Label>
+        <Label fx:id="errorLabel" alignment="CENTER" layoutX="159.0" layoutY="343.0" prefHeight="22.0" prefWidth="558.0" textFill="RED" visible="false">
+            <font>
+                <Font name="Sylfaen" size="16.0" />
+            </font>
+        </Label>
+        <ImageView fx:id="errorIcon" fitHeight="27.0" fitWidth="55.0" layoutX="271.0" layoutY="341.0" pickOnBounds="true" preserveRatio="true" visible="false">
+            <Image url="@../../../Style/Images/error-icon.png" />
+        </ImageView>
+    </AnchorPane>
+    <AnchorPane fx:id="QaAnchorPane" layoutY="94.0" prefHeight="484.0" prefWidth="871.0" visible="false">
+        <Rectangle arcHeight="20.0" arcWidth="20.0" fill="white" height="273.0" layoutX="154.0" layoutY="106.0" stroke="black" strokeType="INSIDE" strokeWidth="3.0" width="564.0">
+           <effect>
+               <DropShadow color="#00000044" radius="15.0" />
+           </effect>
+        </Rectangle>
+        <Label alignment="CENTER" layoutX="157.0" layoutY="185.0" prefHeight="18.0" prefWidth="558.0" text="Reset your Account">
+           <font>
+               <Font name="Comic Sans MS" size="30.0" />
+           </font>
+        </Label>
+        <TextField fx:id="answerField" layoutX="317.0" layoutY="270.0" prefHeight="41.0" prefWidth="242.0" promptText="Answer" styleClass="field" stylesheets="@../../../Style/Styles/addBookPageStyle.css" />
+        <Label layoutX="324.0" layoutY="321.0" prefHeight="22.0" prefWidth="178.0" text="Already have an account?">
+           <font>
+               <Font name="Sylfaen" size="16.0" />
+           </font>
+        </Label>
+        <Button layoutX="619.0" layoutY="326.0" mnemonicParsing="false" onAction="#changeToNewPassword" prefHeight="42.0" prefWidth="89.0" stylesheets="@../../../Style/Styles/LogInPageStyle.css" text="Submit">
+           <font>
+               <Font name="Sylfaen" size="20.0" />
+           </font>
+        </Button>
+        <Circle fill="WHITE" layoutX="436.0" layoutY="118.0" radius="55.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+        <ImageView fitHeight="170.0" fitWidth="167.0" layoutX="353.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../../Style/Images/Logo.png" />
+        </ImageView>
+        <Label layoutX="501.0" layoutY="321.0" onMouseClicked="#changeSceneToLogInPageME" prefHeight="22.0" prefWidth="51.0" text="Log In" textFill="#002fff" underline="true">
+           <font>
+               <Font name="Sylfaen" size="16.0" />
+           </font>
+        </Label>
+        <Label fx:id="errorLabel1" alignment="CENTER" layoutX="159.0" layoutY="343.0" prefHeight="22.0" prefWidth="558.0" text="Incorrect Password" textFill="RED" visible="false">
+           <font>
+               <Font name="Sylfaen" size="16.0" />
+           </font>
+        </Label>
+        <ImageView fx:id="errorIcon1" fitHeight="27.0" fitWidth="55.0" layoutX="331.0" layoutY="341.0" pickOnBounds="true" preserveRatio="true" visible="false">
+            <Image url="@../../../Style/Images/error-icon.png" />
+        </ImageView>
+        <Label fx:id="questionLabel" alignment="CENTER" layoutX="156.0" layoutY="232.0" prefHeight="18.0" prefWidth="558.0">
+           <font>
+               <Font size="16.0" />
+           </font>
+        </Label>
+      <Button layoutX="163.0" layoutY="326.0" mnemonicParsing="false" onAction="#changeToUsername" prefHeight="42.0" prefWidth="89.0" stylesheets="@../../../Style/Styles/LogInPageStyle.css" text="Return">
+         <font>
+            <Font name="Sylfaen" size="20.0" />
+         </font>
+      </Button>
+    </AnchorPane>
+    <AnchorPane fx:id="passwordAnchor" layoutY="94.0" prefHeight="484.0" prefWidth="871.0" visible="false">
+        <Rectangle arcHeight="20.0" arcWidth="20.0" fill="white" height="273.0" layoutX="154.0" layoutY="106.0" stroke="black" strokeType="INSIDE" strokeWidth="3.0" width="564.0">
+           <effect>
+               <DropShadow color="#00000044" radius="15.0" />
+           </effect>
+        </Rectangle>
+        <Label alignment="CENTER" layoutX="157.0" layoutY="185.0" prefHeight="18.0" prefWidth="558.0" text="Reset your Account">
+           <font>
+               <Font name="Comic Sans MS" size="30.0" />
+           </font>
+        </Label>
+        <Label layoutX="324.0" layoutY="321.0" prefHeight="22.0" prefWidth="178.0" text="Already have an account?">
+           <font>
+               <Font name="Sylfaen" size="16.0" />
+           </font>
+        </Label>
+        <Button layoutX="619.0" layoutY="326.0" mnemonicParsing="false" onAction="#resetPassword" prefHeight="42.0" prefWidth="89.0" stylesheets="@../../../Style/Styles/LogInPageStyle.css" text="Submit">
+           <font>
+               <Font name="Sylfaen" size="20.0" />
+           </font>
+        </Button>
+        <Circle fill="WHITE" layoutX="436.0" layoutY="118.0" radius="55.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+        <ImageView fitHeight="170.0" fitWidth="167.0" layoutX="353.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../../Style/Images/Logo.png" />
+        </ImageView>
+        <Label layoutX="501.0" layoutY="321.0" onMouseClicked="#changeSceneToLogInPageME" prefHeight="22.0" prefWidth="51.0" text="Log In" textFill="#002fff" underline="true">
+           <font>
+               <Font name="Sylfaen" size="16.0" />
+           </font>
+        </Label>
+        <Label fx:id="errorLabel2" alignment="CENTER" layoutX="159.0" layoutY="343.0" prefHeight="22.0" prefWidth="558.0" textFill="RED" visible="false">
+           <font>
+               <Font name="Sylfaen" size="16.0" />
+           </font>
+        </Label>
+        <ImageView fx:id="errorIcon2" fitHeight="27.0" fitWidth="55.0" layoutX="331.0" layoutY="341.0" pickOnBounds="true" preserveRatio="true" visible="false">
+            <Image url="@../../../Style/Images/error-icon.png" />
+        </ImageView>
+        <Button layoutX="163.0" layoutY="326.0" mnemonicParsing="false" onAction="#changeToQAFromPassword" prefHeight="42.0" prefWidth="89.0" stylesheets="@../../../Style/Styles/LogInPageStyle.css" text="Return">
+           <font>
+               <Font name="Sylfaen" size="20.0" />
+           </font>
+        </Button>
+      <TextField fx:id="visiblePasswordField" layoutX="182.0" layoutY="264.0" prefHeight="42.0" prefWidth="208.0" styleClass="field" stylesheets="@../../../Style/Styles/addBookPageStyle.css" />
+        <PasswordField fx:id="passwordField" layoutX="182.0" layoutY="264.0" prefHeight="42.0" prefWidth="208.0" styleClass="field" stylesheets="@../../../Style/Styles/addBookPageStyle.css" />
+      <TextField fx:id="visibleReenterPasswordField" layoutX="447.0" layoutY="264.0" prefHeight="42.0" prefWidth="208.0" styleClass="field" stylesheets="@../../../Style/Styles/addBookPageStyle.css" />
+        <PasswordField fx:id="reenterPasswordField" layoutX="447.0" layoutY="264.0" prefHeight="42.0" prefWidth="208.0" styleClass="field" stylesheets="@../../../Style/Styles/addBookPageStyle.css" />
+        <Label layoutX="182.0" layoutY="236.0" prefHeight="18.0" prefWidth="242.0" text="Enter your new password">
+           <font>
+               <Font size="18.0" />
+           </font>
+        </Label>
+        <Label layoutX="447.0" layoutY="236.0" prefHeight="18.0" prefWidth="242.0" text="Re-enter your password">
+           <font>
+               <Font size="18.0" />
+           </font>
+        </Label>
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#d1d1d1" height="42.0" layoutX="382.0" layoutY="264.0" stroke="BLACK" strokeType="INSIDE" width="42.0" />
+      <Rectangle fill="#d1d1d1" height="42.0" layoutX="382.0" layoutY="264.0" stroke="BLACK" strokeType="INSIDE" width="9.0" />
+      <Rectangle fill="#d1d1d1" height="38.0" layoutX="389.0" layoutY="266.0" stroke="#d1d1d1" strokeType="INSIDE" width="3.0" />
+      <Rectangle fill="#d1d1d1" height="8.0" layoutX="385.0" layoutY="265.0" stroke="#d1d1d1" strokeType="INSIDE" width="28.0" />
+      <Rectangle fill="#d1d1d1" height="8.0" layoutX="385.0" layoutY="297.0" stroke="#d1d1d1" strokeType="INSIDE" width="28.0" />
+      <Button id="visibility-button" fx:id="visibilityButton" layoutX="383.0" layoutY="266.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="36.0" stylesheets="@../../../Style/Styles/signUpPageStyle.css" />
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#d1d1d1" height="42.0" layoutX="647.0" layoutY="264.0" stroke="BLACK" strokeType="INSIDE" width="42.0" />
+      <Rectangle fill="#d1d1d1" height="42.0" layoutX="647.0" layoutY="264.0" stroke="BLACK" strokeType="INSIDE" width="9.0" />
+      <Rectangle fill="#d1d1d1" height="38.0" layoutX="654.0" layoutY="266.0" stroke="#d1d1d1" strokeType="INSIDE" width="3.0" />
+      <Rectangle fill="#d1d1d1" height="8.0" layoutX="650.0" layoutY="265.0" stroke="#d1d1d1" strokeType="INSIDE" width="28.0" />
+      <Rectangle fill="#d1d1d1" height="8.0" layoutX="650.0" layoutY="297.0" stroke="#d1d1d1" strokeType="INSIDE" width="28.0" />
+      <Button id="visibility-button" fx:id="visibilityButton1" layoutX="648.0" layoutY="266.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="36.0" stylesheets="@../../../Style/Styles/signUpPageStyle.css" />
+    </AnchorPane>
+</AnchorPane>

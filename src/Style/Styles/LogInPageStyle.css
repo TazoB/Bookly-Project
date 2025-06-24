@@ -1,0 +1,20 @@
+.button {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s ease;
+    -fx-font-family: "Sylfaen";
+    -fx-font-size: 19px;
+}
+
+.button:hover {
+    -fx-background-color: #4287f5;
+    -fx-text-fill: black;
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0, 0, 4);
+}

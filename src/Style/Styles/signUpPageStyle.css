@@ -1,0 +1,25 @@
+#visibility-button {
+    -fx-background-color: #d1d1d1;
+}
+
+#no-button {
+    -fx-background-color: white;
+    -fx-text-fill: red;
+    -fx-border-color: red;
+}
+
+#no-button:hover {
+    -fx-background-color: red;
+    -fx-text-fill: white;
+}
+
+#yes-button {
+    -fx-background-color: white;
+    -fx-text-fill: green;
+    -fx-border-color: green;
+}
+
+#yes-button:hover {
+    -fx-background-color: green;
+    -fx-text-fill: white;
+}

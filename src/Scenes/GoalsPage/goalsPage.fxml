@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="577.0" prefWidth="865.0" stylesheets="@../../Style/Styles/mainPageStyle.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.GoalsPage.GoalsPageController">
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="white" height="95.0" stroke="black" strokeType="INSIDE" width="865.0">
+        <effect>
+            <DropShadow color="#00000033" />
+        </effect>
+    </Rectangle>
+    <Label alignment="CENTER" layoutX="311.0" layoutY="-16.0" prefHeight="66.0" prefWidth="242.0" stylesheets="@../../Style/Styles/mainPageStyle.css" text="Bookly">
+        <font>
+            <Font name="Brush Script MT Italic" size="81.0" />
+        </font>
+    </Label>
+    <ScrollPane id="scrollPane" hbarPolicy="NEVER" layoutY="95.0" prefHeight="402.0" prefWidth="866.0" stylesheets="@../../Style/Styles/mainPageStyle.css">
+
+        <AnchorPane id="anchorPane" prefHeight="583.0" prefWidth="866.0" stylesheets="@../../Style/Styles/mainPageStyle.css">
+            <Rectangle fx:id="rectangle1" arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="103.0" layoutX="125.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="616.0" />
+            <Label layoutX="148.0" layoutY="55.0" text="Read 10 Books">
+                <font>
+                    <Font size="36.0" />
+                </font>
+            </Label>
+            <Label fx:id="label1" alignment="CENTER_RIGHT" layoutX="615.0" layoutY="55.0" prefHeight="54.0" prefWidth="103.0" text="0/10">
+                <font>
+                    <Font size="36.0" />
+                </font>
+            </Label>
+            <Rectangle fx:id="rectangle2" arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="103.0" layoutX="125.0" layoutY="160.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="616.0" />
+            <Label layoutX="148.0" layoutY="185.0" text="Read 50 Books">
+                <font>
+                    <Font size="36.0" />
+                </font>
+            </Label>
+            <Label fx:id="label2" alignment="CENTER_RIGHT" layoutX="623.0" layoutY="185.0" prefHeight="54.0" prefWidth="95.0" text="0/50">
+                <font>
+                    <Font size="36.0" />
+                </font>
+            </Label>
+            <Rectangle fx:id="rectangle3" arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="103.0" layoutX="125.0" layoutY="290.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="616.0" />
+            <Label layoutX="148.0" layoutY="315.0" text="Read 5 books at the same time">
+                <font>
+                    <Font size="36.0" />
+                </font>
+            </Label>
+            <Label fx:id="label3" alignment="CENTER_RIGHT" layoutX="655.0" layoutY="315.0" prefHeight="54.0" prefWidth="63.0" text="0/5">
+                <font>
+                    <Font size="36.0" />
+                </font>
+            </Label>
+            <Rectangle fx:id="rectangle4" arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="103.0" layoutX="125.0" layoutY="420.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="616.0" />
+            <Label layoutX="148.0" layoutY="445.0" text="Add 100 Books in total">
+                <font>
+                    <Font size="36.0" />
+                </font>
+            </Label>
+            <Label fx:id="label4" alignment="CENTER_RIGHT" layoutX="585.0" layoutY="445.0" prefHeight="54.0" prefWidth="133.0" text="0/100">
+                <font>
+                    <Font size="36.0" />
+                </font>
+            </Label>
+        </AnchorPane>
+    </ScrollPane>
+    <HBox alignment="CENTER" layoutY="497.0" prefHeight="80.0" prefWidth="867.0" spacing="30" styleClass="bottom-nav">
+        <Button onAction="#goToMyBooks" prefHeight="69.0" prefWidth="177.0" styleClass="nav-button" text="MY BOOKS" />
+        <Button prefHeight="69.0" prefWidth="177.0" styleClass="nav-button-selected" text="GOALS" />
+        <Button onAction="#goToStats" prefHeight="69.0" prefWidth="177.0" styleClass="nav-button" text="STATS" />
+        <Button onAction="#goToProfile" prefHeight="69.0" prefWidth="177.0" styleClass="nav-button" text="PROFILE" />
+    </HBox>
+
+</AnchorPane>

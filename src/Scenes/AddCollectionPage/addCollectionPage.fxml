@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="anchorPane" prefHeight="577.0" prefWidth="865.0" stylesheets="@../../Style/Styles/addBookPageStyle.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.AddCollectionPage.AddCollectionPageController">
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="white" height="95.0" stroke="black" strokeType="INSIDE" width="865.0">
+      <effect>
+         <DropShadow color="#00000033" />
+      </effect>
+   </Rectangle>
+   <Label alignment="CENTER" layoutX="311.0" layoutY="-16.0" prefHeight="66.0" prefWidth="242.0" stylesheets="@../../Style/Styles/mainPageStyle.css" text="Bookly">
+      <font>
+         <Font name="Brush Script MT Italic" size="81.0" />
+      </font>
+   </Label>
+   <Rectangle arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="425.0" layoutX="173.0" layoutY="124.0" opacity="0.7" stroke="BLACK" strokeType="INSIDE" width="540.0" />
+   <Label alignment="CENTER" layoutX="109.0" layoutY="139.0" prefHeight="30.0" prefWidth="667.0" stylesheets="@../../Style/Styles/addBookPageStyle.css" text="Adding a Collection:" textAlignment="CENTER" wrapText="true">
+      <font>
+         <Font name="Comic Sans MS Italic" size="36.0" />
+      </font>
+   </Label>
+   <Button id="exitButton" layoutX="24.0" layoutY="14.0" mnemonicParsing="false" onAction="#changeSceneToMainPage" prefHeight="70.0" prefWidth="99.0" stylesheets="@../../Style/Styles/mainPageStyle.css" text="EXIT">
+      <font>
+         <Font name="Bodoni MT Condensed" size="35.0" />
+      </font>
+   </Button>
+   <TextField fx:id="collectionName" layoutX="255.0" layoutY="205.0" prefHeight="51.0" prefWidth="376.0" promptText="Collection Name *" styleClass="field">
+      <font>
+         <Font name="Comic Sans MS" size="25.0" />
+      </font>
+   </TextField>
+   <Button layoutX="701.0" layoutY="14.0" mnemonicParsing="false" onAction="#submitCollectionData" prefHeight="70.0" prefWidth="150.0" stylesheets="@../../Style/Styles/mainPageStyle.css" text="SUBMIT">
+      <font>
+         <Font name="Bodoni MT Condensed" size="35.0" />
+      </font>
+   </Button>
+   <TextArea fx:id="description" layoutX="255.0" layoutY="275.0" prefHeight="212.0" prefWidth="376.0" promptText="Description" styleClass="field" wrapText="true" />
+   <Label fx:id="errorMessage" alignment="CENTER" layoutX="173.0" layoutY="495.0" prefHeight="28.0" prefWidth="540.0" text="The Collection with this name already exists!" textFill="RED" visible="false">
+      <font>
+         <Font name="Sylfaen" size="22.0" />
+      </font>
+   </Label>
+</AnchorPane>
