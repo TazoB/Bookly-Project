@@ -14,7 +14,7 @@
 _თუ თქვენ ამ ვარიანტს იყენებთ მაშინ თქვენ უნდა დაამატოთ VM Options პროექტს._
 
 ### 2. Executable ფაილით (გადმოწერის შემდეგ)  
-შეგიძლიათ გადახვიდეთ [Google Drive ლინკზე](https://drive.google.com/drive/folders/1SgVv0NT-YM3vfZjV6WyL8s65TGHO2nUe?usp=sharing) და გადმოწეროთ **Bookly-ის ფოლდერი**.  
+შეგიძლიათ გადახვიდეთ [Google Drive ლინკზე](https://drive.google.com/drive/folders/18hd-zJnVseMT8YBPgR6TevjOxygaKuNL?usp=drive_link) და გადმოწეროთ **Bookly-ის ფოლდერი**.  
 გადმოწერის შემდეგ, აპლიკაციის გასაშვებად ორჯერ დააჭირეთ `Bookly.exe` ფაილზე.
 
 ---
