@@ -56,4 +56,4 @@ bin/
 # ====================
 # Environment files
 # ====================
-.env
+out/artifacts/Bookly_jar/.env

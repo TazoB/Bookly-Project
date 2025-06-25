@@ -7,7 +7,9 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DatabaseConnectionManager {
-    static Dotenv dotenv = Dotenv.configure().directory(System.getProperty("user.dir")).load();
+    static Dotenv dotenv = Dotenv.configure()
+            .filename(".env")
+            .load();
 
     private static final String URL = dotenv.get("DB_URL");
     private static final String USER = dotenv.get("DB_USER");
