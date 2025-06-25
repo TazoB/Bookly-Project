@@ -1,22 +1,16 @@
 package Database;
 
-import io.github.cdimascio.dotenv.Dotenv;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DatabaseConnectionManager {
-    static Dotenv dotenv = Dotenv.configure()
-            .filename(".env")
-            .load();
 
-    private static final String URL = dotenv.get("DB_URL");
-    private static final String USER = dotenv.get("DB_USER");
-    private static final String PASSWORD = dotenv.get("DB_PASSWORD");
+    private static final String URL = "jdbc:postgresql://switchyard.proxy.rlwy.net:27334/railway";
+    private static final String USER = "postgres";
+    private static final String PASSWORD = "USteHzezLPAKcheQnuXFBclRlviigMpv";
 
     public Connection getConnection() throws SQLException {
-        assert URL != null;
         return DriverManager.getConnection(URL, USER, PASSWORD);
     }
 }
