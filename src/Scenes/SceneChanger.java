@@ -44,7 +44,11 @@ public class SceneChanger {
     }
 
     public void changeSceneToSignUpPage(MouseEvent mouseEvent) throws IOException {
-        changeSceneUsingMouseEvent(mouseEvent, "/Scenes/Registration/SignUp/SignUp.fxml");
+        changeSceneUsingMouseEvent(mouseEvent, "/Scenes/Registration/SignUp/signUP.fxml");
+    }
+
+    public void changeSceneToSignUpPageAE(ActionEvent actionEvent) throws Exception {
+        changeScene(actionEvent, "Registration/SignUp/signUP.fxml");
     }
 
     public void changeSceneToLogInPageME(MouseEvent mouseEvent) throws IOException {

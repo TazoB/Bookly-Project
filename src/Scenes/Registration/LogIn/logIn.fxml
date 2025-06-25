@@ -68,7 +68,7 @@
          <Font name="Sylfaen" size="16.0" />
       </font>
    </Label>
-   <Label layoutX="493.0" layoutY="461.0" onMouseClicked="#changeSceneToSignUpPage" prefHeight="22.0" prefWidth="55.0" text="Sign Up" textFill="#002fff" underline="true">
+   <Label layoutX="497.0" layoutY="460.0" onMouseClicked="#changeSceneToSignUpPage" prefHeight="22.0" prefWidth="55.0" text="Sign Up" textFill="#002fff" underline="true">
       <font>
          <Font name="Sylfaen" size="16.0" />
       </font>
