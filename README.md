@@ -12,7 +12,7 @@
 შეგიძლიათ ამ პროექტის Git repository-ი კლონირება მოახდინოთ თქვენს კომპიუტერში და გაუშვათ კოდი Java-ს რომელიმე კომპაილერის დახმარებით, როგორიცაა მაგალითად **IntelliJ IDEA**.
 
 ### 2. Executable ფაილით (გადმოწერის შემდეგ)  
-შეგიძლიათ გადახვიდეთ [Google Drive ლინკზე](https://your-google-drive-link.com) და გადმოწეროთ **Bookly-ის ფოლდერი**.  
+შეგიძლიათ გადახვიდეთ [Google Drive ლინკზე](https://drive.google.com/drive/folders/1SgVv0NT-YM3vfZjV6WyL8s65TGHO2nUe?usp=sharing) და გადმოწეროთ **Bookly-ის ფოლდერი**.  
 გადმოწერის შემდეგ, აპლიკაციის გასაშვებად ორჯერ დააჭირეთ `Bookly.exe` ფაილზე.
 
 ---
